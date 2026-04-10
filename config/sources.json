@@ -1,0 +1,1 @@
+{ "sources": [ { "name": "Classic Football Shirts", "url": "https://www.classicfootballshirts.co.uk", "type": "scrape", "selector": { "container": ".product-item", "name": ".product-name", "price": ".product-price", "image": ".product-image img", "link": "a" } } ] }
