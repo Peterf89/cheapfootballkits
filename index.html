@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Shirt Listings</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .shirt { border: 1px solid #ccc; margin-bottom: 20px; padding: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Football Shirt Listings</h1>
+    <div id="shirts"></div>
+    <script>
+        const shirtsData = [
+            // Example JSON data
+            {
+                "team": "Manchester United",
+                "player": "Bruno Fernandes",
+                "price": "£49.99",
+                "image": "url_to_image"
+            },
+            {
+                "team": "Chelsea FC",
+                "player": "Mason Mount",
+                "price": "£54.99",
+                "image": "url_to_image"
+            }
+        ];
+
+        const shirtsContainer = document.getElementById('shirts');
+
+        shirtsData.forEach(shirt => {
+            const shirtDiv = document.createElement('div');
+            shirtDiv.className = 'shirt';
+            shirtDiv.innerHTML = `<h2>${shirt.player} - ${shirt.team}</h2>\n` +
+                                `<img src='${shirt.image}' alt='${shirt.player} shirt' style='width:100px;height:auto;'>\n` +
+                                `<p>Price: ${shirt.price}</p>`;
+            shirtsContainer.appendChild(shirtDiv);
+        });
+    </script>
+</body>
+</html>
